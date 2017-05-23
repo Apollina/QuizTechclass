@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="loading.css"/>
+        <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+
+
+        <!--Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- /Bootstrap -->
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <!-- QUIZ -->
+        <div class="container">
+            <div class="row"><br><br>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="loader">
+                        <div class="col-xs-3 col-xs-offset-5">
+                            <div id="loadbar" style="display: none;">
+                                <img src="img/loading.gif" alt="Loading" class="center-block loanParamsLoader" style="">
+                            </div>
+                        </div>
+
+                        <div id="quiz">
+
+                            <div class="question">
+                                <h3><span class="label label-warning" id="qid">1</span>
+                                    <span id="question"> What does HTML stand for?</span>
+                                </h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="f-option" name="selector" value="1">
+                                    <label for="f-option" class="element-animation">Hyper Text Markup Language</label>
+                                    <div class="check"></div>
+                                </li>
+
+                                <li>
+                                    <input type="radio" id="s-option" name="selector" value="2">
+                                    <label for="s-option" class="element-animation">Hyperlinks and Text Markup Language</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+
+                                <li>
+                                    <input type="radio" id="t-option" name="selector" value="3">
+                                    <label for="t-option" class="element-animation">Home Tool Markup Language</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+
+                                <li>
+                                    <input type="radio" id="d-option" name="selector" value="4">
+                                    <label for="t-option" class="element-animation">Happily Transmitted Melody of Liliput</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-muted">
+                        <span id="answer"></span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div id="result-of-question" class="pulse animated" style="display: none;">
+                        <span id="totalCorrect" class="pull-right"></span>
+                        <table class="table table-hover table-responsive" >
+                            <thead>
+                            <tr>
+                                <th>Question No.</th>
+                                <th>Our answer</th>
+                                <th>Your answer</th>
+                                <th>Result</th>
+                            </tr>
+                            </thead>
+                            <tbody id="quizResult"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /QUIZ -->
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- /Bootstrap -->
+        <script type="text/javascript" src="loading-bar.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
