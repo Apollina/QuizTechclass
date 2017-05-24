@@ -1,179 +1,81 @@
-body, html{
+/*-- START PAGE --*/
+
+.bg-color1 {
+    background-color: #18bc9c;
+    color: #ffffff;
+}
+.bg-color2 {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+.container-fluid {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+.col-md-4 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+}
+
+body {
     height: 100%;
-    background: #222222;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.8;
+}
+
+.height {
+    padding: 20px;
+}
+
+p {font-size: 16px;}
+
+h1, h2
+{
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
 }
-.center-block{
-    width: 100%;
-}
-h2 {
-    color: #AAAAAA;
-    font-weight: normal;
-}
-/*-- QUIZ --*/
 
-.loanParamsLoader {
-    top: 143px;
-    margin: auto;
-    position: absolute;
-    right: 17%;
-    width: 100%;
+.img-circle {
+    width: 200px;
+    height: auto;
 }
-.question{
-    background: #fff;
-    padding: 20px;
-    color: #18bc9c;
-    border-style: double;
+.start {
+    padding-bottom: 30px;
+}
+
+.btn.outline {
+
+    border-radius: 26px;
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: none;
+    width: 300px;
+}
+.btn-primary.outline {
+    border: 2px solid #ffffff;
+    color: #2c3e50;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.8
+}
+.btn-primary.outline:hover {
+    color: #2c3e50;
     border-color: #2c3e50;
-    border-bottom-right-radius: 55px;
-    border-top-left-radius: 55px;
+    background: #ffffff;
 }
-
-#qid{
-    margin-right: 22px;
-    background-color: #2c3e50;
-    color: #FFFFFF;
-}
-.container ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
 }
 
 
-ul li{
-    color: #AAAAAA;
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100px;
-    border-bottom: 1px solid #111111;
-}
-
-ul li input[type=radio]{
-    position: absolute;
-    visibility: hidden;
-}
-
-ul li label{
-    display: block;
-    position: relative;
-    font-weight: 300;
-    font-size: 1.35em;
-    padding: 25px 25px 25px 80px;
-    margin: 10px auto;
-    height: 30px;
-    z-index: 9;
-    cursor: pointer;
-    -webkit-transition: all 0.25s linear;
-}
-
-ul li:hover label{
-    color: #2c3e50;
-}
-
-ul li .check{
-    display: block;
-    position: absolute;
-    border: 5px solid #AAAAAA;
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-    top: 30px;
-    left: 20px;
-    z-index: 5;
-    transition: border .25s linear;
-    -webkit-transition: border .25s linear;
-}
-
-ul li:hover .check {
-    border: 5px solid #2c3e50;
-}
-
-ul li .check::before {
-    display: block;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 14px;
-    width: 14px;
-    top: 3px;
-    left: 3px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear;
-}
-
-input[type=radio]:checked ~ .check {
-    border: 5px solid #2c3e50;
-}
-
-input[type=radio]:checked ~ .check::before{
-    background: #2c3e50;/*attr('data-background');*/
-}
-
-input[type=radio]:checked ~ label{
-    color: #2c3e50;
-}
-
-#result-of-question th{
-    text-align: center;
-    background: #18bc9c;
-    color: #fff;
-    padding: 18px;
-    font-size: 18px;
-    border: none;
-}
-#result-of-question  td{
-    text-align: center;
-    color: #222;
-    background-color: #fff;
-    padding: 18px;
-    font-size: 15px;
-    font-weight: 600;
-    border: 1px solid #18bc9c;
-}
-
-#totalCorrect{
-    color: #fff;
-    background: #2c3e50;
-    padding: 22px 20px;
-    border-radius: 1px;
-    font-stretch: expanded;
-    font-size: 28px;
-    font-weight: bold;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-}
-#alert{
-    /* Position fixed */
-    position:fixed;
-    /* Center it! */
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
-}
-
-/*-- QUIZ --*/
-
-/*----------riple bubble-----------------*/
-ul {
-    margin: 0 auto;
-}
-/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
-.ink {
-    display: inline;
-    position: absolute;
-    background: #18bc9c;
-    border-radius: 100%;
-    transform: scale(0);
-}
-/*animation effect*/
-.ink.animate {animation: ripple 0.65s linear;}
-@keyframes ripple {
-    /*scale the element to 250% to safely cover the entire link and fade it out*/
-    100% {opacity: 0; transform: scale(2.5);}
-}
-
+/*-- /START PAGE --*/

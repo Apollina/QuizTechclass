@@ -34,77 +34,44 @@
 
         <!-- Add your site or application content here -->
 
-        <!-- QUIZ -->
-        <div class="container">
-            <div class="row"><br><br>
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div class="loader">
-                        <div class="col-xs-3 col-xs-offset-5">
-                            <div id="loadbar" style="display: none;">
-                                <img src="img/loading.gif" alt="Loading" class="center-block loanParamsLoader" style="">
-                            </div>
-                        </div>
 
-                        <div id="quiz">
+        <!-- START PAGE -->
 
-                            <div class="question">
-                                <h3><span class="label label-warning" id="qid">1</span>
-                                    <span id="question"> What does HTML stand for?</span>
-                                </h3>
-                            </div>
-                            <ul>
-                                <li>
-                                    <input type="radio" id="f-option" name="selector" value="1">
-                                    <label for="f-option" class="element-animation">Hyper Text Markup Language</label>
-                                    <div class="check"></div>
-                                </li>
-
-                                <li>
-                                    <input type="radio" id="s-option" name="selector" value="2">
-                                    <label for="s-option" class="element-animation">Hyperlinks and Text Markup Language</label>
-                                    <div class="check"><div class="inside"></div></div>
-                                </li>
-
-                                <li>
-                                    <input type="radio" id="t-option" name="selector" value="3">
-                                    <label for="t-option" class="element-animation">Home Tool Markup Language</label>
-                                    <div class="check"><div class="inside"></div></div>
-                                </li>
-
-                                <li>
-                                    <input type="radio" id="d-option" name="selector" value="4">
-                                    <label for="t-option" class="element-animation">Happily Transmitted Melody of Liliput</label>
-                                    <div class="check"><div class="inside"></div></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="text-muted">
-                        <span id="answer"></span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div id="result-of-question" class="pulse animated" style="display: none;">
-                        <span id="totalCorrect" class="pull-right"></span>
-                        <table class="table table-hover table-responsive" >
-                            <thead>
-                            <tr>
-                                <th>Question No.</th>
-                                <th>Our answer</th>
-                                <th>Your answer</th>
-                                <th>Result</th>
-                            </tr>
-                            </thead>
-                            <tbody id="quizResult"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        <div class="container-fluid bg-color1 text-center">
+            <img src="img/welcome.png" class="img-circle">
+            <h1>Hello</h1>
+            <h2>Welcome to the quiz of [Course Name].</h2>
         </div>
-        <!-- /QUIZ -->
+
+
+        <div class="container-fluid bg-color2 text-center">
+                <div class="row">
+                    <h2>Quiz details</h2>
+                    <div class="col-md-4 text-center">
+                        <img class="img-circle" src="img/assignment.png">
+                        <h3>There will be __ questions.</h3>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-circle" src="img/time.png">
+                        <h3>You have __ minutes to finish this quiz.</h3>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-circle" src="img/matherials.png">
+                        <h3>You are not allowed to use class materials and any other materials.</h3>
+                    </div>
+                    <h3 style="text-decoration: underline;">Quiz has to be done individually.</h3>
+                </div>
+            </div>
+
+            <div class="container-fluid bg-color1 text-center">
+                <div class="start">
+                <h3>Click start button when you are ready.</h3>
+                <h3>Good luck!</h3>
+            </div>
+                <a href="quiz.html" class="btn btn-primary btn-lg outline">start</a>
+
+            </div>
+        <!-- /START PAGE -->
 
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
