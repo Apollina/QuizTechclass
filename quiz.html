@@ -10,13 +10,6 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/quiz.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="loading.css"/>
-    <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
-
 
     <!--Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -26,6 +19,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- /Bootstrap -->
 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+
+
+
+
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -33,6 +34,29 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
+
+<!-- TIMER -->
+
+<div id="clockdiv">
+    <!-- <div>
+        <span class="days"></span>
+        <div class="smalltext">Days</div>
+    </div> -->
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">Hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+    </div>
+</div>
+<!-- /TIMER -->
+
 
 <!-- QUIZ -->
 <div class="container">
@@ -52,6 +76,15 @@
                             <span id="question"> What does HTML stand for?</span>
                         </h3>
                     </div>
+
+                    <!--progress bar-->
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                             aria-valuemax="100" style="width: 1%">
+                        </div>
+                    </div>
+                    <!--end of progress bar-->
+
                     <ul>
                         <li>
                             <input type="radio" id="f-option" name="selector" value="1">
@@ -73,7 +106,7 @@
 
                         <li>
                             <input type="radio" id="d-option" name="selector" value="4">
-                            <label for="t-option" class="element-animation">Happily Transmitted Melody of Liliput</label>
+                            <label for="d-option" class="element-animation">Happily Transmitted Melody of Liliput</label>
                             <div class="check"><div class="inside"></div></div>
                         </li>
                     </ul>
@@ -88,6 +121,9 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div id="result-of-question" class="pulse animated" style="display: none;">
+                <h1>You have took the quiz of [Course name]</h1>
+                <span id="pass" class="center-block"></span>
+                <span id="fail" class="center-block"></span>
                 <span id="totalCorrect" class="pull-right"></span>
                 <table class="table table-hover table-responsive" >
                     <thead>
@@ -100,15 +136,31 @@
                     </thead>
                     <tbody id="quizResult"></tbody>
                 </table>
+                <a href="index.html" class="btn btn-primary btn-lg outline">Exit</a>
             </div>
         </div>
     </div>
 </div>
 <!-- /QUIZ -->
 
+<!-- Modal "Time is up" -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Sorry your time is up! </h3>
+        <p>You can retake quiz later.</p>
+        <p>Now you will be redirected to the start page.</p>
+    </div>
+
+</div>
+
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
@@ -116,7 +168,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- /Bootstrap -->
-<script type="text/javascript" src="loading-bar.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
